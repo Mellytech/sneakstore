@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNEAKSTORE - Premium Sneakers & Sportswear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <p>🚚 Free delivery on orders over $100 | 🎁 New members get 15% off</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="logo">
+                        <a href="#home">SNEAKSTORE</a>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <div class="nav-links">
+                        <a href="#home" class="active">Home</a>
+                        <a href="men.html">Men</a>
+                        <a href="women.html">Women</a>
+                        <a href="kids.html">Kids</a>
+                        <a href="new-releases.html">New Releases</a>
+                    </div>
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                </div>
+                <div class="nav-right">
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+                    </div>
+                    <button class="btn btn-icon" id="wishlistBtn" onclick="toggleWishlist()">
+                        ❤️ <span class="badge" id="wishlistBadge">0</span>
+                    </button>
+                    <button class="btn btn-icon" id="cartBtn" onclick="toggleCart()">
+                        🛒 <span class="badge" id="cartBadge">0</span>
+                    </button>
+                    <button class="btn btn-icon" id="themeToggle" onclick="toggleTheme()">
+                        🌙
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Parallax Background -->
+        <div class="parallax-hero" id="parallaxHero">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=1080&fit=crop" alt="Parallax Sneaker">
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">JUST DO IT</h2>
+                    <p class="hero-subtitle">Elevate your game with the latest sneaker technology</p>
+                    <button class="btn btn-primary btn-large" onclick="scrollToProducts()">Shop Now</button>
+                </div>
+                <div class="hero-image" id="heroImage">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=600&fit=crop" alt="Hero Sneaker">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <div class="filter-options">
+                        <div class="filter-chip" data-filter="running">Running</div>
+                        <div class="filter-chip" data-filter="basketball">Basketball</div>
+                        <div class="filter-chip" data-filter="lifestyle">Lifestyle</div>
+                        <div class="filter-chip" data-filter="training">Training</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Material</h4>
+                    <div class="filter-options">
+                        <div class="filter-chip" data-filter="leather">Leather</div>
+                        <div class="filter-chip" data-filter="mesh">Mesh</div>
+                        <div class="filter-chip" data-filter="synthetic">Synthetic</div>
+                        <div class="filter-chip" data-filter="canvas">Canvas</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h4>Technology</h4>
+                    <div class="filter-options">
+                        <div class="filter-chip" data-filter="air-max">Air Max</div>
+                        <div class="filter-chip" data-filter="boost">Boost</div>
+                        <div class="filter-chip" data-filter="react">React</div>
+                        <div class="filter-chip" data-filter="gel">Gel</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-bar">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="running">Running</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="training">Training</option>
+                </select>
+                <select id="genderFilter" class="filter-select">
+                    <option value="all">All Gender</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
+                </select>
+                <select id="priceFilter" class="filter-select">
+                    <option value="all">All Prices</option>
+                    <option value="0-100">Under $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200-300">$200 - $300</option>
+                    <option value="300+">Over $300</option>
+                </select>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="recently-viewed" id="recentlyViewed" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Recently Viewed</h2>
+            <div class="recently-viewed-grid" id="recentlyViewedGrid">
+                <!-- Recently viewed products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="men">
+                    <img src= https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop" alt="Men's Shoes">
+                    <h3>Men's Shoes</h3>
+                    <p>Performance meets style</p>
+                </div>
+                <div class="category-card" data-category="women">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop" alt="Women's Shoes">
+                    <h3>Women's Shoes</h3>
+                    <p>Elevate your workout</p>
+                </div>
+                <div class="category-card" data-category="running">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Running Shoes">
+                    <h3>Running Shoes</h3>
+                    <p>Unleash your speed</p>
+                </div>
+                <div class="category-card" data-category="training">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop" alt="Training Shoes">
+                    <h3>Training Shoes</h3>
+                    <p>Power your performance</p>
+                </div>
+                <div class="category-card" data-category="lifestyle">
+                    <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop" alt="Lifestyle Sneakers">
+                    <h3>Lifestyle Sneakers</h3>
+                    <p>Street-ready style</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Sneakers -->
+    <section class="trending">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-slider" id="trendingSlider">
+                <!-- Trending products will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Free Delivery</h3>
+                    <p>On orders over $100</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Premium Quality</h3>
+                    <p>Authentic products only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get the Latest Sneaker Releases</h2>
+                <p>Subscribe to our newsletter for exclusive drops and offers</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" id="newsletterEmail">
+                    <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Running</a></li>
+                        <li><a href="#">Basketball</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SNEAKSTORE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically loaded -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: <span id="cartTotal">$0.00</span></span>
+            </div>
+            <button class="btn btn-primary btn-large" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3>My Wishlist</h3>
+            <button class="close-btn" onclick="toggleWishlist()">×</button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be dynamically loaded -->
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="quick-view-content">
+            <button class="close-btn" onclick="closeQuickView()">×</button>
+            <div class="quick-view-image">
+                <img id="quickViewImage" src="" alt="Product">
+            </div>
+            <div class="quick-view-info">
+                <h2 id="quickViewName"></h2>
+                <div class="quick-view-rating" id="quickViewRating"></div>
+                <div class="quick-view-price" id="quickViewPrice"></div>
+                <div class="size-recommendation" id="sizeRecommendation">
+                    <h4>Recommended Size</h4>
+                    <div class="recommended-size" id="recommendedSize">10</div>
+                    <div class="size-confidence">Based on your preferences</div>
+                </div>
+                <div class="size-selector">
+                    <label>Select Size:</label>
+                    <div class="size-options" id="quickViewSizeOptions">
+                        <!-- Size options will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="quantity-selector">
+                    <label>Quantity:</label>
+                    <div class="quantity-controls">
+                        <button onclick="decreaseQuickViewQuantity()">-</button>
+                        <input type="number" id="quickViewQuantity" value="1" min="1" max="10">
+                        <button onclick="increaseQuickViewQuantity()">+</button>
+                    </div>
+                </div>
+                <div class="quick-view-actions">
+                    <button class="btn btn-primary btn-large" onclick="addToCartFromQuickView()">Add to Cart</button>
+                    <button class="btn btn-outline" onclick="toggleQuickViewWishlist()">
+                        <span id="quickViewWishlistIcon">❤️</span> Add to Wishlist
+                    </button>
+                </div>
+                <div class="social-share">
+                    <span>Share:</span>
+                    <button class="share-btn" onclick="shareProduct('facebook')">📘</button>
+                    <button class="share-btn" onclick="shareProduct('twitter')">🐦</button>
+                    <button class="share-btn" onclick="shareProduct('pinterest')">📌</button>
+                    <button class="share-btn" onclick="shareProduct('whatsapp')">💬</button>
+                </div>
+                <div class="video-gallery">
+                    <h4>Product Videos</h4>
+                    <div class="video-thumbnail" onclick="playProductVideo()">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=200&fit=crop" alt="Product Video">
+                        <div class="video-play-btn">▶️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeProductModal()">×</button>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <img id="modalMainImage" src="" alt="Product">
+                    <div class="thumbnail-grid" id="thumbnailGrid">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h2 id="modalProductName"></h2>
+                    <p id="modalProductCategory"></p>
+                    <div class="product-rating" id="modalProductRating"></div>
+                    <div class="price" id="modalProductPrice"></div>
+                    <div class="size-recommendation" id="modalSizeRecommendation">
+                        <h4>Recommended Size</h4>
+                        <div class="recommended-size" id="modalRecommendedSize">10</div>
+                        <div class="size-confidence">Based on your preferences</div>
+                    </div>
+                    <div class="size-selector">
+                        <label>Select Size:</label>
+                        <div class="size-options" id="sizeOptions">
+                            <!-- Size options will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="modalQuantity" value="1" min="1" max="10">
+                            <button onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large" onclick="addToCartFromModal()">Add to Cart</button>
+                        <button class="btn btn-outline" onclick="toggleWishlistModal()">
+                            <span id="modalWishlistIcon">❤️</span> Add to Wishlist
+                        </button>
+                    </div>
+                    <div class="social-share">
+                        <span>Share:</span>
+                        <button class="share-btn" onclick="shareProduct('facebook')">📘</button>
+                        <button class="share-btn" onclick="shareProduct('twitter')">🐦</button>
+                        <button class="share-btn" onclick="shareProduct('pinterest')">📌</button>
+                        <button class="share-btn" onclick="shareProduct('whatsapp')">💬</button>
+                    </div>
+                    <div class="video-gallery">
+                        <h4>Product Videos</h4>
+                        <div class="video-thumbnail" onclick="playProductVideo()">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=200&fit=crop" alt="Product Video">
+                            <div class="video-play-btn">▶️</div>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <h4>Product Details</h4>
+                        <p id="modalProductDescription"></p>
+                    </div>
+                    <!-- Reviews Section -->
+                    <div class="reviews-section">
+                        <div class="reviews-header">
+                            <div class="reviews-summary">
+                                <div class="average-rating" id="averageRating">4.5</div>
+                                <div>
+                                    <div class="stars" id="averageStars"></div>
+                                    <div class="total-reviews" id="totalReviews">128 reviews</div>
+                                </div>
+                            </div>
+                            <button class="write-review-btn" onclick="writeReview()">Write a Review</button>
+                        </div>
+                        <div class="reviews-list" id="reviewsList">
+                            <!-- Reviews will be dynamically loaded -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize search functionality for index.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', handleSearch);
+            }
+        });
+    </script>
+</body>
+</html>
