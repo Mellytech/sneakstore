@@ -6,11 +6,11 @@ const products = [
         category: "lifestyle",
         gender: "men",
         price: 120,
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80"
         ],
         description: "Classic design meets modern comfort with the Air Max 90. Featuring visible Air cushioning and a timeless silhouette.",
         badge: "new",
@@ -31,11 +31,11 @@ const products = [
         category: "running",
         gender: "women",
         price: 180,
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80"
         ],
         description: "Experience unlimited energy return with UltraBoost 22. Perfect for long-distance running and daily training.",
         badge: "sale",
@@ -56,11 +56,11 @@ const products = [
         category: "basketball",
         gender: "men",
         price: 150,
-        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80"
         ],
         description: "Combining elements from classic Jordan models, the Legacy 312 offers style and performance on and off the court.",
         badge: "new",
@@ -81,11 +81,11 @@ const products = [
         category: "training",
         gender: "men",
         price: 130,
-        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80"
         ],
         description: "Built for intense training sessions. The Metcon 8 provides stability and support for all your workouts.",
         badge: null,
@@ -106,11 +106,11 @@ const products = [
         category: "lifestyle",
         gender: "women",
         price: 160,
-        image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80"
         ],
         description: "Futuristic design meets everyday comfort. React Vision features transparent sole and bold styling.",
         badge: "new",
@@ -131,11 +131,11 @@ const products = [
         category: "running",
         gender: "men",
         price: 110,
-        image: "https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80"
         ],
         description: "Your daily running partner. Pegasus 39 offers responsive cushioning and durable support for every mile.",
         badge: "sale",
@@ -156,11 +156,11 @@ const products = [
         category: "lifestyle",
         gender: "kids",
         price: 80,
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80"
         ],
         description: "Vintage basketball style for the next generation. Classic design with modern comfort for kids.",
         badge: null,
@@ -181,11 +181,11 @@ const products = [
         category: "running",
         gender: "women",
         price: 65,
-        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop",
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80",
         images: [
-            "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-            "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop"
+            "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+            "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600&q=80"
         ],
         description: "Lightweight and comfortable running shoes perfect for beginners and daily runners.",
         badge: "sale",
@@ -835,8 +835,21 @@ function loadFromLocalStorage() {
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     loadFromLocalStorage();
+    
+    // Auto-filter based on page
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('men.html')) {
+        filteredProducts = products.filter(p => p.gender === 'men');
+    } else if (currentPath.includes('women.html')) {
+        filteredProducts = products.filter(p => p.gender === 'women');
+    } else if (currentPath.includes('kids.html')) {
+        filteredProducts = products.filter(p => p.gender === 'kids');
+    } else if (currentPath.includes('new-releases.html')) {
+        filteredProducts = products.filter(p => p.badge === 'new' || p.badge === 'limited');
+    }
+
     renderProducts();
-    renderTrendingProducts();
+    if (document.getElementById('trendingSlider')) renderTrendingProducts();
     updateCartBadge();
     updateWishlistBadge();
     setupEventListeners();
@@ -1104,20 +1117,14 @@ function setupEventListeners() {
     });
 }
 
-// Theme Management
+// Theme Management (Forced Dark for Premium Feel)
 function setupTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('themeToggle').innerHTML = '<span class="icon">☀️</span>';
-    }
+    document.body.classList.add('dark-mode');
 }
 
 function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    document.getElementById('themeToggle').innerHTML = isDark ? '<span class="icon">☀️</span>' : '<span class="icon">🌙</span>';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    // Disabled to maintain premium dark aesthetic
+    showToast('Premium Dark Mode is active', 'info');
 }
 
 // Product Rendering
@@ -1373,9 +1380,24 @@ function toggleCart() {
     renderCart();
     
     // Close wishlist if open
-    document.getElementById('wishlistSidebar').classList.remove('active');
+    if (sidebar.classList.contains('active')) {
+        document.getElementById('wishlistSidebar').classList.remove('active');
+    }
 }
 
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.getElementById('menuToggle');
+    navLinks.classList.toggle('active');
+    
+    if (navLinks.classList.contains('active')) {
+        menuToggle.textContent = '✕';
+        menuToggle.style.color = 'var(--primary-color)';
+    } else {
+        menuToggle.textContent = '☰';
+        menuToggle.style.color = 'white';
+    }
+}
 // Wishlist Functionality
 function toggleWishlistItem(productId, event) {
     event.stopPropagation();
@@ -1582,15 +1604,19 @@ function handleScroll() {
 }
 
 function showToast(message, type = 'success') {
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-    toast.textContent = message;
-    document.body.appendChild(toast);
+    let toast = document.querySelector('.toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
     
-    setTimeout(() => toast.classList.add('show'), 100);
+    toast.textContent = message;
+    toast.style.background = type === 'warning' ? 'var(--warning-color)' : 'var(--primary-color)';
+    toast.classList.add('show');
+    
     setTimeout(() => {
         toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300);
     }, 3000);
 }
 
