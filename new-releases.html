@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Releases - SNEAKSTORE</title>
+    <title>SNEAK® | New Drops & Releases</title>
+    <meta name="description" content="Exclusive drops. Limited editions. Be the first to own the future of footwear.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <div class="container">
-            <p>🚚 Free delivery on orders over $100 | 🎁 New members get 15% off</p>
-        </div>
-    </div>
+<body class="dark-mode">
+    
+   
 
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -23,73 +19,54 @@
             <div class="nav-container">
                 <div class="nav-left">
                     <div class="logo">
-                        <a href="index.html">SNEAKSTORE</a>
+                        <a href="index.html">SNEAK</a>
                     </div>
                 </div>
-                <div class="nav-center">
-                    <div class="nav-links">
+                <div class="nav-right">
+                    <div class="nav-links" id="navLinks">
                         <a href="index.html">Home</a>
                         <a href="men.html">Men</a>
                         <a href="women.html">Women</a>
                         <a href="kids.html">Kids</a>
                         <a href="new-releases.html" class="active">New Releases</a>
                     </div>
-                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-                </div>
-                <div class="nav-right">
-                    <div class="search-container">
-                        <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+                    <div class="nav-actions">
+                        <div class="search-container">
+                            <input type="text" class="search-input" id="searchInput" placeholder="Search Drops...">
+                        </div>
+                        <button class="btn-icon" id="wishlistBtn" onclick="toggleWishlist()">
+                            ❤️ <span class="badge" id="wishlistBadge">0</span>
+                        </button>
+                        <button class="btn-icon" id="cartBtn" onclick="toggleCart()">
+                            🛒 <span class="badge" id="cartBadge">0</span>
+                        </button>
+                        <button class="mobile-menu-toggle" id="menuToggle" onclick="toggleMobileMenu()">☰</button>
                     </div>
-                    <button class="btn btn-icon" id="wishlistBtn" onclick="toggleWishlist()">
-                        ❤️ <span class="badge" id="wishlistBadge">0</span>
-                    </button>
-                    <button class="btn btn-icon" id="cartBtn" onclick="toggleCart()">
-                        🛒 <span class="badge" id="cartBadge">0</span>
-                    </button>
-                    <button class="btn btn-icon" id="themeToggle" onclick="toggleTheme()">
-                        🌙
-                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="index.html">Home</a> / <span>New Releases</span>
-        </div>
-    </div>
-
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>New Releases</h1>
-            <p>Be the first to own the latest sneaker drops. Fresh designs, cutting-edge technology, and exclusive colorways just landed.</p>
+    <section class="hero category-hero">
+        <div class="parallax-hero" id="parallaxHero">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&fit=crop" alt="Global Release" style="filter: brightness(0.3);">
         </div>
-    </section>
-
-    <!-- Countdown Timer -->
-    <section class="countdown-section">
         <div class="container">
-            <div class="countdown-content">
-                <h2>Next Drop In</h2>
-                <div class="countdown-timer" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
+            <div class="hero-text" style="max-width: 100%; text-align: center;">
+                <h1 class="hero-title">NEXT DROP</h1>
+                <div id="countdown" style="display: flex; justify-content: center; gap: 30px; margin: 40px 0;">
+                    <div class="countdown-item" style="background: var(--glass-bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--glass-border); min-width: 100px;">
+                        <span id="days" style="display: block; font-size: 40px; font-weight: 800; font-family: 'Bebas Neue';">00</span>
+                        <span style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase;">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <div class="countdown-item" style="background: var(--glass-bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--glass-border); min-width: 100px;">
+                        <span id="hours" style="display: block; font-size: 40px; font-weight: 800; font-family: 'Bebas Neue';">00</span>
+                        <span style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase;">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <div class="countdown-item" style="background: var(--glass-bg); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--glass-border); min-width: 100px;">
+                        <span id="minutes" style="display: block; font-size: 40px; font-weight: 800; font-family: 'Bebas Neue';">00</span>
+                        <span style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase;">Mins</span>
                     </div>
                 </div>
                 <button class="btn btn-primary btn-large">Notify Me</button>
@@ -97,99 +74,24 @@
         </div>
     </section>
 
-    <!-- Filter Bar -->
-    <section class="filter-section">
+    <!-- Products Section -->
+    <section class="featured-products" id="featured">
         <div class="container">
+            <h2 class="section-title">Just Landed</h2>
             <div class="filter-bar">
                 <select id="categoryFilter" class="filter-select">
                     <option value="all">All Categories</option>
                     <option value="running">Running</option>
-                    <option value="basketball">Basketball</option>
                     <option value="lifestyle">Lifestyle</option>
-                    <option value="training">Training</option>
                 </select>
                 <select id="genderFilter" class="filter-select">
-                    <option value="all">All Gender</option>
+                    <option value="all">All Genders</option>
                     <option value="men">Men</option>
                     <option value="women">Women</option>
-                    <option value="kids">Kids</option>
-                </select>
-                <select id="priceFilter" class="filter-select">
-                    <option value="all">All Prices</option>
-                    <option value="0-100">Under $100</option>
-                    <option value="100-200">$100 - $200</option>
-                    <option value="200-300">$200 - $300</option>
-                    <option value="300+">Over $300</option>
-                </select>
-                <select id="sortFilter" class="filter-select">
-                    <option value="newest">Newest First</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="name">Name: A to Z</option>
                 </select>
             </div>
-        </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="products-section">
-        <div class="container">
             <div class="products-grid" id="productsGrid">
-                <!-- Products will be dynamically loaded here -->
-            </div>
-            <div class="load-more-container">
-                <button class="btn btn-outline btn-large" id="loadMoreBtn">Load More Products</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coming Soon Section -->
-    <section class="coming-soon">
-        <div class="container">
-            <h2 class="section-title">Coming Soon</h2>
-            <div class="coming-soon-grid">
-                <div class="coming-soon-card">
-                    <div class="coming-soon-image">
-                        <img src="https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=400&h=300&fit=crop" alt="Coming Soon">
-                        <div class="coming-soon-overlay">
-                            <span class="coming-soon-badge">COMING SOON</span>
-                        </div>
-                    </div>
-                    <div class="coming-soon-info">
-                        <h3>Air Max 2024</h3>
-                        <p>Next-gen cushioning meets classic design</p>
-                        <div class="release-date">Release: March 15, 2024</div>
-                        <button class="btn btn-outline">Notify Me</button>
-                    </div>
-                </div>
-                <div class="coming-soon-card">
-                    <div class="coming-soon-image">
-                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop" alt="Coming Soon">
-                        <div class="coming-soon-overlay">
-                            <span class="coming-soon-badge">COMING SOON</span>
-                        </div>
-                    </div>
-                    <div class="coming-soon-info">
-                        <h3>UltraBoost X</h3>
-                        <p>Revolutionary energy return technology</p>
-                        <div class="release-date">Release: March 22, 2024</div>
-                        <button class="btn btn-outline">Notify Me</button>
-                    </div>
-                </div>
-                <div class="coming-soon-card">
-                    <div class="coming-soon-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Coming Soon">
-                        <div class="coming-soon-overlay">
-                            <span class="coming-soon-badge">COMING SOON</span>
-                        </div>
-                    </div>
-                    <div class="coming-soon-info">
-                        <h3>Jordan Legacy 2024</h3>
-                        <p>The evolution of a basketball legend</p>
-                        <div class="release-date">Release: April 1, 2024</div>
-                        <button class="btn btn-outline">Notify Me</button>
-                    </div>
-                </div>
+                <!-- Loaded via script.js -->
             </div>
         </div>
     </section>
@@ -197,117 +99,46 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="#">Running</a></li>
-                        <li><a href="#">Basketball</a></li>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Training</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#">📘</a>
-                        <a href="#">📷</a>
-                        <a href="#">🐦</a>
-                        <a href="#">📺</a>
-                    </div>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SNEAKSTORE. All rights reserved.</p>
+                <p>&copy; 2026 SNEAKSTORE. Designed for the Future.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cart Sidebar -->
+    <!-- Modals & Sidebars -->
     <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
+        <div class="sidebar-header">
+            <h3>Cart</h3>
             <button class="close-btn" onclick="toggleCart()">×</button>
         </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be dynamically loaded -->
-        </div>
+        <div class="cart-items" id="cartItems"></div>
         <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total: <span id="cartTotal">$0.00</span></span>
-            </div>
-            <button class="btn btn-primary btn-large" onclick="checkout()">Checkout</button>
+            <div class="cart-total">Total: <span id="cartTotal">$0.00</span></div>
+            <button class="btn btn-primary btn-large" style="width:100%">Checkout</button>
         </div>
     </div>
 
-    <!-- Wishlist Sidebar -->
     <div class="wishlist-sidebar" id="wishlistSidebar">
-        <div class="wishlist-header">
-            <h3>My Wishlist</h3>
+        <div class="sidebar-header">
+            <h3>Wishlist</h3>
             <button class="close-btn" onclick="toggleWishlist()">×</button>
         </div>
-        <div class="wishlist-items" id="wishlistItems">
-            <!-- Wishlist items will be dynamically loaded -->
-        </div>
+        <div class="wishlist-items" id="wishlistItems"></div>
     </div>
 
-    <!-- Product Modal -->
     <div class="product-modal" id="productModal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeProductModal()">×</button>
-            <div class="product-detail">
+            <div class="product-detail" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
                 <div class="product-gallery">
-                    <img id="modalMainImage" src="" alt="Product">
-                    <div class="thumbnail-grid" id="thumbnailGrid">
-                        <!-- Thumbnails will be loaded dynamically -->
-                    </div>
+                    <img id="modalMainImage" src="" alt="">
+                    <div class="thumbnail-grid" id="thumbnailGrid"></div>
                 </div>
                 <div class="product-info">
                     <h2 id="modalProductName"></h2>
-                    <p id="modalProductCategory"></p>
-                    <div class="price" id="modalProductPrice"></div>
-                    <div class="size-selector">
-                        <label>Select Size:</label>
-                        <div class="size-options" id="sizeOptions">
-                            <!-- Size options will be loaded dynamically -->
-                        </div>
-                    </div>
-                    <div class="quantity-selector">
-                        <label>Quantity:</label>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity()">-</button>
-                            <input type="number" id="modalQuantity" value="1" min="1" max="10">
-                            <button onclick="increaseQuantity()">+</button>
-                        </div>
-                    </div>
-                    <div class="product-actions">
-                        <button class="btn btn-primary btn-large" onclick="addToCartFromModal()">Add to Cart</button>
-                        <button class="btn btn-outline" onclick="toggleWishlistModal()">
-                            <span id="modalWishlistIcon">❤️</span> Add to Wishlist
-                        </button>
-                    </div>
-                    <div class="product-description">
-                        <h4>Product Details</h4>
-                        <p id="modalProductDescription"></p>
-                    </div>
+                    <div class="product-price" id="modalProductPrice"></div>
+                    <p id="modalProductDescription" style="color:var(--text-secondary);margin-bottom:20px"></p>
+                    <button class="btn btn-primary btn-large" onclick="addToCartFromModal()">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -315,193 +146,27 @@
 
     <script src="script.js"></script>
     <script>
-        // Background slideshow images for new releases page
-        const backgroundImages = [
-            'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1551107699-a5b68d2794e3?w=1920&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=1920&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1920&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=600&fit=crop'
-        ];
-
-        let currentImageIndex = 0;
-        let backgroundImageElement;
-
-        // Initialize background slideshow
-        function initBackgroundSlideshow() {
-            backgroundImageElement = document.createElement('div');
-            backgroundImageElement.style.cssText = `
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                z-index: 0;
-                opacity: 0.3;
-                transition: opacity 1s ease-in-out;
-            `;
-            
-            const pageHeader = document.querySelector('.page-header');
-            if (pageHeader) {
-                pageHeader.style.position = 'relative';
-                pageHeader.style.overflow = 'hidden';
-                pageHeader.insertBefore(backgroundImageElement, pageHeader.firstChild);
-                
-                // Start the slideshow
-                changeBackgroundImage();
-                setInterval(changeBackgroundImage, 10000);
-            }
-        }
-
-        // Change background image with fade effect
-        function changeBackgroundImage() {
-            if (!backgroundImageElement) return;
-            
-            // Fade out
-            backgroundImageElement.style.opacity = '0';
-            
-            // Change image and fade in after transition
-            setTimeout(() => {
-                currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-                backgroundImageElement.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
-                backgroundImageElement.style.opacity = '0.3';
-            }, 1000);
-        }
-
-        // Page-specific initialization
-        document.addEventListener('DOMContentLoaded', function() {
-            loadFromLocalStorage();
-            filterNewReleases();
-            renderProducts();
-            updateCartBadge();
-            updateWishlistBadge();
-            setupEventListeners();
-            setupTheme();
-            initBackgroundSlideshow();
-            startCountdown();
-        });
-
-        // Filter new releases
-        function filterNewReleases() {
-            filteredProducts = products.filter(product => product.badge === 'new');
-        }
-
-        // Countdown Timer
+        // Countdown Timer Logic
         function startCountdown() {
-            // Set the date we're counting down to (next Friday at 9 AM)
             const now = new Date();
             const nextFriday = new Date(now);
             nextFriday.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7 || 7));
             nextFriday.setHours(9, 0, 0, 0);
-            
             const countDownDate = nextFriday.getTime();
-            
-            const timer = setInterval(function() {
+
+            setInterval(function() {
                 const now = new Date().getTime();
                 const distance = countDownDate - now;
-                
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 document.getElementById("days").textContent = String(days).padStart(2, '0');
                 document.getElementById("hours").textContent = String(hours).padStart(2, '0');
                 document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-                
-                if (distance < 0) {
-                    clearInterval(timer);
-                    document.getElementById("countdown").innerHTML = "<h3>DROP LIVE NOW!</h3>";
-                }
             }, 1000);
         }
-
-        // Enhanced filter handling for this page
-        function handleFilter() {
-            const category = document.getElementById('categoryFilter').value;
-            const gender = document.getElementById('genderFilter').value;
-            const priceRange = document.getElementById('priceFilter').value;
-            const sortBy = document.getElementById('sortFilter').value;
-            
-            let filtered = products.filter(product => product.badge === 'new');
-            
-            // Apply category filter
-            if (category !== 'all') {
-                filtered = filtered.filter(product => product.category === category);
-            }
-            
-            // Apply gender filter
-            if (gender !== 'all') {
-                filtered = filtered.filter(product => product.gender === gender);
-            }
-            
-            // Apply price filter
-            if (priceRange !== 'all') {
-                const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-                filtered = filtered.filter(product => 
-                    max ? (product.price >= min && product.price <= max) : product.price >= min
-                );
-            }
-            
-            // Apply sorting
-            switch(sortBy) {
-                case 'price-low':
-                    filtered.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price-high':
-                    filtered.sort((a, b) => b.price - a.price);
-                    break;
-                case 'name':
-                    filtered.sort((a, b) => a.name.localeCompare(b.name));
-                    break;
-                case 'newest':
-                    // Keep original order (newest first)
-                    break;
-            }
-            
-            filteredProducts = filtered;
-            renderProducts();
-        }
-
-        // Load more functionality
-        document.getElementById('loadMoreBtn').addEventListener('click', function() {
-            // Simulate loading more products
-            this.innerHTML = '<span class="loading"></span> Loading...';
-            setTimeout(() => {
-                this.innerHTML = 'Load More Products';
-                showToast('More products loaded!');
-            }, 1000);
-        });
-
-        // Update event listeners for this page
-        function setupEventListeners() {
-            // Search functionality
-            document.getElementById('searchInput').addEventListener('input', handleSearch);
-            
-            // Filter functionality
-            document.getElementById('categoryFilter').addEventListener('change', handleFilter);
-            document.getElementById('genderFilter').addEventListener('change', handleFilter);
-            document.getElementById('priceFilter').addEventListener('change', handleFilter);
-            document.getElementById('sortFilter').addEventListener('change', handleFilter);
-            
-            // Cart and Wishlist toggles
-            document.getElementById('cartBtn').addEventListener('click', toggleCart);
-            document.getElementById('wishlistBtn').addEventListener('click', toggleWishlist);
-            
-            // Theme toggle
-            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-            
-            // Close modals on outside click
-            document.getElementById('productModal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeProductModal();
-                }
-            });
-        }
+        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 </body>
 </html>
